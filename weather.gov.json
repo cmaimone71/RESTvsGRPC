@@ -16,7 +16,12 @@
 							"pm.test(\"Expected status code is 200\", function () {\r",
 							"    pm.response.to.have.status(200);\r",
 							"});\r",
-							""
+							"\r",
+							"pm.test(\"Validate response properties\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.data.orders ,  \"Orders should not be null\").is.not.null;\r",
+							"    pm.expect(jsonData.context ,  \"context should not be null\").is.not.null;\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
