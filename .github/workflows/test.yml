@@ -10,4 +10,4 @@ jobs:
         with:
           node-version: '12'
       - run: npm install -g newman
-      - run: newman run weather.gov.json" --insecure
+      - run: newman run weather.gov.json --insecure
